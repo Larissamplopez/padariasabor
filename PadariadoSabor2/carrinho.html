@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo da Compra</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .caixa {
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            color: #5a3221;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5a3221;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f5efe6;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #a58b74;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #5a3221;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #a9745b;
+        }
+
+        .total {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caixa">
+        <h1>Resumo da Compra</h1>
+
+        <!-- ✅ LISTA DOS ITENS -->
+        <ul id="lista-resumo"></ul>
+
+        <!-- ✅ Estes são os IDs que o JS usa -->
+        <p class="total">Subtotal: R$ <span id="total-resumo">0.00</span></p>
+
+        <!-- ✅ IDs extras que vamos usar na nova versão do JS -->
+        <p class="total">Desconto pedidos acima de R$50,00: R$ <span id="desconto">0.00</span></p>
+        <p class="total">Total Final: R$ <span id="total-final">0.00</span></p>
+
+        <hr><br>
+
+        <!-- ✅ Nome -->
+        <label>Nome do Cliente</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+
+        <!-- ✅ Forma de Pagamento -->
+        <label>Pagamento</label>
+        <select id="pagamento">
+            <option value="real">Reais (BRL)</option>
+            <option value="euro">Euro (EUR)</option>
+        </select>
+        <!-- ✅ Tipo de Pagamento -->
+<label>Forma de Pagamento</label>
+<select id="tipo-pagamento">
+    <option value="pix">PIX</option>
+    <option value="cartao">Cartão de Crédito</option>
+    <option value="dinheiro">Dinheiro</option>
+</select>
+
+        <!-- ✅ Total em Euro -->
+        <p class="total">Total em Euro: € <span id="total-euro">0.00</span></p>
+
+        <!-- ✅ Botão WhatsApp -->
+        <button id="btn-whatsapp">Enviar Pedido pelo WhatsApp</button>
+    </div>
+
+    <!-- ✅ Arquivo JS principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>
